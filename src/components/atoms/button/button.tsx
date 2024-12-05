@@ -1,12 +1,16 @@
 import styled from "@emotion/styled";
 
-const ButtonDiv = styled.div`
+const ButtonDiv = styled.button`
   color: hotpink;
   font-size: 20px;
 `;
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface Props {}
-export const Button: React.FC<Props> = () => {
-  return <ButtonDiv>hi</ButtonDiv>;
+interface Props {
+  label: string;
+  onClick?: () => void;
+}
+const Button: React.FC<Props> = ({ label, onClick }) => {
+  return <ButtonDiv onClick={onClick}>{label}</ButtonDiv>;
 };
+
+export default Button;

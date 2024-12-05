@@ -1,7 +1,7 @@
-import React from "react";
+import { vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
-import Button from "./Button";
+
+import Button from "./button";
 
 describe("Button Component", () => {
   test("renders button with given label", () => {
@@ -11,7 +11,7 @@ describe("Button Component", () => {
   });
 
   test("calls onClick handler when clicked", () => {
-    const handleClick = jest.fn();
+    const handleClick = vi.fn(); // Use vi.fn() instead of jest.fn()
     render(<Button label="Click Me" onClick={handleClick} />);
     const buttonElement = screen.getByText("Click Me");
     fireEvent.click(buttonElement);

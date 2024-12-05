@@ -8,8 +8,9 @@ const Movies = styled.div`
   column-gap: 20px;
   flex-wrap: wrap;
   padding: 10px;
-  height: 500px;
+  height: 630px;
   overflow: scroll;
+  row-gap: 10px;
 `;
 
 interface Movie {

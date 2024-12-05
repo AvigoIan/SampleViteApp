@@ -51,6 +51,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   releaseDate,
   description,
 }) => {
+  console.log("poster URL ", posterUrl);
   return (
     <Card>
       {/* {posterUrl && <Poster src={posterUrl} alt={`${title} poster`} />} */}

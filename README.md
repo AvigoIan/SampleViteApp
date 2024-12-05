@@ -52,4 +52,11 @@ export default tseslint.config({
 Instructions:
 `nvm use --lts`
 
+To build it:
+`npm run build`
+
+Run in development mode:
 `npm run dev`
+
+Run in production mode:
+`npm run preview`
