@@ -9,8 +9,6 @@ interface Props {
   label: string;
   onClick?: () => void;
 }
-const Button: React.FC<Props> = ({ label, onClick }) => {
+export const Button: React.FC<Props> = ({ label, onClick }) => {
   return <ButtonDiv onClick={onClick}>{label}</ButtonDiv>;
 };
-
-export default Button;
